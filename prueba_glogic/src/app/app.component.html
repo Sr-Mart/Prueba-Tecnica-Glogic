@@ -1,0 +1,68 @@
+<div class="container">
+  <span class="contact">Contactos</span>
+
+  <div class="container-contact">
+
+    <span class="add_contact">Agregar nuevo contacto</span>
+
+    <div class="subcontainer">
+
+      <div class="entrada">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" (input)="nameInput($event)" [value]="name">
+      </div>
+
+      <div class="entrada">
+        <label for="entity">Entidad</label>
+        <input type="text" id="entity" (input)="entityInput($event)" [value]="entity">
+      </div>
+
+      <div class="entrada">
+        <label for="email">Correo</label>
+        <input type="text" id="email" (input)="emailInput($event)" [value]="email">
+      </div>
+
+    </div>
+
+    <button class="button-add" (click)="performAction()">{{ userId > 0 ? 'Actualizar' : 'Agregar' }}</button>
+
+  </div>
+
+  <div class="container-filter">
+    <span class="span-filter">Filtrar por:</span>
+
+    <div class="filter">
+      <input type="text" name="filter" id="filter" class="input-filter" placeholder="🔍 Filtro" [value]="filterText"
+        (input)="filterInput($event)">
+      <button class="search" (click)="search()">Buscar</button>
+    </div>
+
+  </div>
+
+  <div class="container-table">
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Entidad</th>
+          <th scope="col">Email</th>
+          <th scope="col">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of filteredUsers; let i = index">
+          <td>{{ data.nombre }}</td>
+          <td>{{ data.Entidad }}</td>
+          <td>{{ data.Email }}</td>
+          <td>
+            <button class="button-options" (click)="findById((i + 1))">🖋️</button>
+            <button class="button-options" (click)="delete(i)">✖️</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>

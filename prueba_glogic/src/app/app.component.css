@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact {
+  margin: 15px 0;
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: bold;
+}
+
+input {
+  border-radius: 20px;
+  border: none;
+}
+
+.container-contact {
+  background-color: #d1d1d1;
+  padding: 1.5rem;
+  margin: 1rem;
+  max-width: 100vw;
+  box-shadow: -7px 10px 3px 2px rgb(167 167 167 / 20%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add_contact {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: lighter;
+}
+
+.subcontainer {
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.entrada {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.button-add {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: ease-in-out .5s;
+}
+
+.span-filter {
+  font-size: 15px;
+  color: #000;
+  font-weight: bolder;
+}
+
+.container-filter {
+  margin: 10px 0 20px;
+}
+
+.input-filter {
+  border: .5px solid #c4c4c4;
+  box-shadow: -7px 10px 3px 2px rgb(167 167 167 / 20%);
+}
+
+.search {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: ease-in-out .5s;
+}
+
+.button-add:hover, .search:hover {
+  background: #c4c4c4;
+}
+
+.container-table{
+  width: 100%;
+}
+
+.button-options{
+  border: none;
+  background: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .entrada {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
